@@ -1,3 +1,3 @@
 package lib
 
-func New() {}
+func NewBreaking() {}
