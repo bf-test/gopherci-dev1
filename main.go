@@ -4,12 +4,14 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/bf-test/gopherci-dev1/internal/pkg"
 	"github.com/pkg/errors"
 )
 
 func main() {
-	name := "fred"
-	_, err := fmt.Println("Hello %s", name)
+	// Importing an internal package ensures GopherCI clones the repository to
+	// the correct locations.
+	_, err := fmt.Println("Hello %s", pkg.InternalPkgName) // govet: possible formatting directive in Println call
 	if err != nil {
 		fmt.Println(errors.Wrap(err, "could not print")) // add external dependency
 	}
