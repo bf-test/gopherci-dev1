@@ -1,8 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/pkg/errors"
+)
 
 func main() {
 	name := "fred"
-	fmt.Println("Hello %s", name)
+	_, err := fmt.Println("Hello %s", name)
+	if err != nil {
+		fmt.Println(errors.Wrap(err, "could not print")) // add external dependency
+	}
 }
