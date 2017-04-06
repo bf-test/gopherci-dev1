@@ -7,4 +7,5 @@ func main() {
 	fmt.Println("Hello %s", name)
 	// one
 	// two
+	// three
 }
