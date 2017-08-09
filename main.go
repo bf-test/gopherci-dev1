@@ -21,3 +21,5 @@ func fn1() { // warning: func fn1 is unused (U1000) (unused)
 	time.Parse("12345", "")    // warning: parsing time "12345" as "12345": cannot parse "" as "4" (SA1002) (staticcheck)
 	time.Now().Sub(time.Now()) // warning: should use time.Since instead of time.Now().Sub (S1012) (gosimple)
 }
+
+func fn2() {} // warning: func fn1 is unused (U1000) (unused)
