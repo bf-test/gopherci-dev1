@@ -8,4 +8,5 @@ func main() {
 	// one
 	// two
 	fmt.Println("Hello %s", name)
+	fmt.Println("Hello %s", name) // another
 }
